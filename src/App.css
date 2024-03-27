@@ -1,38 +1,208 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+:root{
+  --shadow: 0 1px 10px #757575;
+  --scrolling-box: 0 3px 1rem rgba(0,0,0,.1);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
   text-align: center;
+  line-height: 1.5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Header and Navigation */
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: background-color .5s ease;
+  z-index: 1000;
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Codes ng Navigation or Navbar  */
+.navbar{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  transition: height .5s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar .header-logo{
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 110px;
+}
+
+.navbar-list-items{
+  display: flex;
+  list-style: none;
+}
+
+.navbar-link{
+  margin: 0 1.55rem;
+  position: relative;
+  font-weight: 600;
+}
+
+.navbar-link::after{
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #eaeaea;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .5s ease;
+}
+
+.navbar-link:hover::after{
+  transform: scaleX(1);
+}
+
+.contact-circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: #FEC930;
+  border-radius: 25px;
+  margin-right: 110px;
+}
+
+.contact-circle a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Ito ang Changing Color Scrolling Effect */
+.scrolling-active{
+  background-color: #fff;
+  box-shadow: var(--scrolling-box);
+}
+.scrolling-active .navbar{
+  height: 4.5rem;
+}
+.scrolling-active .navbar a{
+  color: #333;
+}
+.scrolling-active .navbar-link::after{
+  font-weight: 500;
+  background-color: #333;
+}
+
+#showcase-area {
+  background-image: url('./img/ShwCs-Area-Bg.png');
+  background-size: cover;
+  background-position: center;
+  height: 110vh;
+}
+
+#showcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  height: 110vh;
+  top: 60;
+  left: 0;
+  background-color: rgba(87, 87, 87, 0.6);
+}
+
+.content {
+  text-align: left;
+  padding: 20px;
+  color: black;
+  margin-top: 190px;
+  margin-left: 100px;
+  line-height: 1;
+}
+
+.content h5{
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  color: #FEC930;
+  font-weight: bolder;
+}
+
+.content h3{
+  margin: 0;
+  padding: 0;
+  font-size: 75px;
+  color: #FEC930;
+  font-weight: bolder;
+}
+
+.content h2{
+  margin: 0;
+  padding: 0;
+  font-size: 90px;
+  color: #FEC930;
+  font-weight: bolder;
+}
+
+.content p{
+  margin: 10px 0;
+  padding: 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -10px;
+  margin-top: 190px;
+  width: 65%;
+  text-align: center;
+  justify-self: center;
+}
+
+.imageClass {
+  max-width: 100%;
+  height: auto;
+}
+
+.btnView{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 53px;
+  width: 189px;
+  background-color: #FEC930;
+  color: #fff;
+  border-radius: 15px;
+  margin-top: 12px;
 }
