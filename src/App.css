@@ -90,7 +90,7 @@ header{
   transform: scaleX(1);
 }
 
-.contact-circle{
+.btnContact{
   display: flex;
   justify-content: center;
   align-items: center;

@@ -30,7 +30,7 @@ const Header = () => {
                     <li><a href="#coreValue" className="navbar-link">Core Values</a></li>
                     <li><a href="#mission_vision" className="navbar-link">Mission & Vision</a></li>
                 </ul>
-                <div className='contact-circle'>
+                <div className='btnContact'>
                     <a href="#contact">Contact</a>
                 </div>
             </nav>
