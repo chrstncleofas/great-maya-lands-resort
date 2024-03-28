@@ -1,5 +1,5 @@
-import './App.css';
-import Logo from './img/Great-Logo-Maya.png';
+import '../App.css';
+import Logo from '../components/img/Header-Logo.png';
 import React, { useState, useEffect } from 'react';
 
 const Header = () => {
@@ -22,7 +22,7 @@ const Header = () => {
         <header className={scrolling ? 'scrolling-active' : ''}>
             <nav className="navbar">
                 <div>
-                    <a href="#home" className="header-logo"><img className="logoImg" src={Logo} alt="Img" /></a>
+                    <a href="#home" className="headerLogo"><img className="imageLogo" src={Logo} alt="Img" /></a>
                 </div>
                 <ul className="navbar-list-items">
                     <li><a href="#project" className="navbar-link">Project</a></li>

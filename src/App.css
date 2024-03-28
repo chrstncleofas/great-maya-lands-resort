@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
   --shadow: 0 1px 10px #757575;
   --scrolling-box: 0 3px 1rem rgba(0,0,0,.1);
 }
+
+/* ---------------------- Utilities Area ------------------------ */
 
 *{
   margin: 0;
@@ -16,18 +18,43 @@ a{
 }
 
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   line-height: 1.5;
 }
+
 
 h1, h2, h3, h4, h5, h6{
   margin: 0;
   padding-bottom: 10px;
   font-size: 20px;
+  letter-spacing: 8px;
 }
 
-/* Header and Navigation */
+.btnView{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 125px;
+  background-color: #FEC930;
+  color: #fff;
+  border-radius: 15px;
+  margin-top: 12px;
+}
+
+.btnContact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: #FEC930;
+  border-radius: 25px;
+  margin-right: 110px;
+}
+
+/* --------------- Header and Navigation ------------------------- */
 header{
   width: 100%;
   position: fixed;
@@ -55,7 +82,7 @@ header{
   font-size: 1rem;
 }
 
-.navbar .header-logo{
+.navbar .headerLogo{
   float: left;
   font-size: 20px;
   font-weight: bold;
@@ -90,16 +117,6 @@ header{
   transform: scaleX(1);
 }
 
-.btnContact{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 14px;
-  background-color: #FEC930;
-  border-radius: 25px;
-  margin-right: 110px;
-}
-
 .contact-circle a{
   text-decoration: none;
   color: #fff;
@@ -107,6 +124,7 @@ header{
 }
 
 /* Ito ang Changing Color Scrolling Effect */
+
 .scrolling-active{
   background-color: #fff;
   box-shadow: var(--scrolling-box);
@@ -122,8 +140,9 @@ header{
   background-color: #333;
 }
 
+/* ------------- Showcase Area ---------- */
 #showcase-area {
-  background-image: url('./img/ShwCs-Area-Bg.png');
+  background-image: url('./components/img/Background-Image.png');
   background-size: cover;
   background-position: center;
   height: 110vh;
@@ -166,6 +185,7 @@ header{
 
 .content h2{
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
   font-size: 90px;
   color: #FEC930;
@@ -195,14 +215,4 @@ header{
   height: auto;
 }
 
-.btnView{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 53px;
-  width: 189px;
-  background-color: #FEC930;
-  color: #fff;
-  border-radius: 15px;
-  margin-top: 12px;
-}
+/*  */
