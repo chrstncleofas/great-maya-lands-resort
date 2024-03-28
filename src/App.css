@@ -23,7 +23,6 @@ body{
   line-height: 1.5;
 }
 
-
 h1, h2, h3, h4, h5, h6{
   margin: 0;
   padding-bottom: 10px;
@@ -44,7 +43,12 @@ h1, h2, h3, h4, h5, h6{
   margin-top: 12px;
 }
 
+.btnContact-mb-view{
+  display: none;
+}
+
 .btnContact{
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,6 +56,15 @@ h1, h2, h3, h4, h5, h6{
   background-color: #FEC930;
   border-radius: 25px;
   margin-right: 110px;
+}
+
+.btnContact:hover{
+  color: #333;
+  background-color: #ffd65a;
+}
+
+.btnContact a:hover{
+  color: #333;;
 }
 
 /* --------------- Header and Navigation ------------------------- */
@@ -78,26 +91,25 @@ header{
 .navbar a{
   text-decoration: none;
   color: #fff;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1rem;
+  letter-spacing: 1.6px;
+}
+
+.navbar-link{
+  margin: 0 1.55rem;
+  position: relative;
+  font-weight: 700;
 }
 
 .navbar .headerLogo{
   float: left;
-  font-size: 20px;
-  font-weight: bold;
   margin-left: 110px;
 }
 
 .navbar-list-items{
   display: flex;
   list-style: none;
-}
-
-.navbar-link{
-  margin: 0 1.55rem;
-  position: relative;
-  font-weight: 600;
 }
 
 .navbar-link::after{
@@ -134,9 +146,10 @@ header{
 }
 .scrolling-active .navbar a{
   color: #333;
+  font-weight: 700;
 }
 .scrolling-active .navbar-link::after{
-  font-weight: 500;
+  font-weight: 700;
   background-color: #333;
 }
 
@@ -149,22 +162,22 @@ header{
 }
 
 #showcase {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  height: 110vh;
   top: 60;
   left: 0;
+  display: grid;
+  height: 110vh;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
   background-color: rgba(87, 87, 87, 0.6);
 }
 
 .content {
-  text-align: left;
   padding: 20px;
+  line-height: 1;
   color: black;
+  text-align: left;
   margin-top: 190px;
   margin-left: 100px;
-  line-height: 1;
 }
 
 .content h5{
@@ -185,10 +198,10 @@ header{
 
 .content h2{
   margin: 0;
-  margin-bottom: 20px;
   padding: 0;
   font-size: 90px;
   color: #FEC930;
+  margin-bottom: 20px;
   font-weight: bolder;
 }
 
@@ -215,4 +228,95 @@ header{
   height: auto;
 }
 
-/*  */
+/* Media Queries */
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 530px) {
+
+  body{
+    overflow: hidden;
+  }
+
+  header{
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    z-index: 1000;
+    padding: 20px;
+  }
+
+  .navbar .headerLogo {
+    margin-left: 10px;
+  }
+
+  .navbar .headerLogo img{
+    width: 70px;
+    height: 60px;
+  }
+
+  .menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      margin-right: 11px;
+  }
+
+  .navbar .btnContact{
+    display: none;
+  }
+
+  .navbar-list-items .btnContact-mb-view{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px;
+    background-color: #FEC930;
+    border-radius: 25px;
+  }
+
+  .navbar-list-items {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      background: #f9f9f9;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-top: 1px solid #ddd;
+  }
+
+  .navbar-list-items a {
+      color: #333;
+  }
+
+  .navbar-list-items.active {
+      display: flex;
+  }
+
+  .navbar-list-items li {
+      margin-bottom: 10px;
+  }
+
+  .btnContact {
+      display: block;
+      margin-right: 10px;
+  }
+
+  /* ------------- Showcase Area ---------- */
+  #showcase-area {
+    overflow: hidden;
+    background-image: url('./components/img/Background-Image.png');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+  }
+}
