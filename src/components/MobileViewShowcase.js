@@ -1,10 +1,12 @@
 import '../App.css';
 import React from 'react';
 import { RiArrowRightSLine } from 'react-icons/ri';
+import backgroundImg from '../components/img/Background-Image.png';
 
 const MobileViewShowcase = () => {
     return (
         <section id="showcase-area-2">
+            <img className="imageClass" src={backgroundImg} alt="Img" />
             <div id="showcase-2">
                 <div className="content-2">
                     <h5>Find you</h5>
