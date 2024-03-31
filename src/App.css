@@ -357,7 +357,7 @@ header{
   .content-2 h5 {
     margin: 0;
     padding: 0;
-    font-size: 25px;
+    font-size: 29px;
     color: #fec930;
     font-weight: bolder;
   }
@@ -365,7 +365,7 @@ header{
   .content-2 h3 {
     margin: 0;
     padding: 0;
-    font-size: 45px;
+    font-size: 49px;
     color: #fec930;
     font-weight: bolder;
   }
@@ -373,30 +373,37 @@ header{
   .content-2 h2 {
     margin: 0;
     padding: 0;
-    font-size: 50px;
+    font-size: 57px;
     color: #fec930;
     margin-bottom: 20px;
     font-weight: bolder;
   }
 
   .content-2 p {
-    margin: 10px 0;
-    padding: 0;
-    font-size: 16px;
+    margin: 10px 0px 15px 0px;
+    font-size: 14px;
     color: #fff;
   }
 
   .btnView-2 {
-    display: flex;
+    display: inline-block;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 45px;
-    width: 120px;
+    padding: 11px 9px 11px 9px;
     background-color: #fec930;
     color: #fff;
     border-radius: 15px;
-    margin-top: 12px;
+  }
+
+  .btnView-2 > .iconTag{
+    position: relative;
+    top: 2px;
+    left: -0.019em;
+  }
+
+  .btnView-2 .txtView{
+    position: relative;
+    top: -0.009em;
+    left: 5px;
   }
 
 }

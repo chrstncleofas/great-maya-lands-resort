@@ -14,7 +14,7 @@ const MobileViewShowcase = () => {
                     <h2>Property</h2>
                     <p>From Search to Sold: Transforming Properties, Elevating Lives</p>
                     <a className="btnView-2" href="#main">
-                        View More <RiArrowRightSLine />
+                        <span className='txtView'>View More</span> <RiArrowRightSLine className='iconTag'/>
                     </a>
                 </div>
             </div>
