@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Header />
       <Showcase />
-      <Projects />
       <MobileViewShowcase />
+      <Projects />
     </div>
   );
 }
